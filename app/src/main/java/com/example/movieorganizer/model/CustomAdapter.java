@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.movieorganizer.R;
+import com.example.movieorganizer.ui.Activity3;
 
 import java.util.List;
 
@@ -17,12 +18,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     private List<Movie> dataList;
     private Context context;
-    private int rowLayout;
 
-    public CustomAdapter(List<Movie> dataList, Context context, int rowLayout) {
+    public CustomAdapter(List<Movie> dataList, Context context) {
         this.dataList = dataList;
         this.context = context;
-        this.rowLayout = rowLayout;
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder {
@@ -44,7 +43,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
+        View view = layoutInflater.inflate(R.layout.custom_row, parent, false);
         return new CustomViewHolder(view);
     }
 

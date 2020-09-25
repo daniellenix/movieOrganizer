@@ -45,13 +45,12 @@ public class Activity2 extends AppCompatActivity implements BarcodeReader.Barcod
         });
 
 
-
         Intent intent = Activity3.makeIntent(Activity2.this, barcode.displayValue);
         startActivityForResult(intent, 1);
     }
 
     @Override
-    public void onScannedMultiple(List<Barcode> barcodes) {
+    public void onScannedMultiple(List<Barcode> barcode) {
     }
 
     @Override

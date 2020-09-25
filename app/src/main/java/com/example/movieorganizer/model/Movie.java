@@ -1,5 +1,7 @@
 package com.example.movieorganizer.model;
 
+import java.util.List;
+
 public class Movie {
     private String title;
     private int year;

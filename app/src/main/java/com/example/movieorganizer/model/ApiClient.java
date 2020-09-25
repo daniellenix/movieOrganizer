@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "https://api.upcitemdb.com/prod/trial/lookup?upc=";
+    public static final String BASE_URL = "https://api.upcitemdb.com/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {
